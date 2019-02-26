@@ -1,0 +1,64 @@
+Presentacion de Gobstones
+-------------------------
+El programa comienza con la palabra clave program y sus comandos van entre llaves { … }
+Los comandos comienzan con mayúscula como por ejemplo Poner, Mover, Sacar, IrAlBorde
+Los valores literales también empiezan con mayúscula como por ejemplo Rojo, Verde, Norte, Este
+
+Gobstones requiere que se use la palabra exacta tanto para los comandos, los literales y las sentencias
+
+Los comandos primitivos llevan un argumento como por ejemplo Poner(Rojo), Mover(Norte), siendo el argumento un valor que le da información al comando.
+
+Los comentarios son de dos tipos: de línea (//) y de párrafo(/* */)
+
+Los comandos primitivos se pueden poner en secuencia para indicar varias acciones una detrás de otra.
+
+Un procedimiento permite definir un comando nuevo y para ello se usa la palabra clave procedure.
+
+Este se parece a un programa, pero tiene un nombre el cual se se usará como comando. Su nombre empieza con mayúsculas, la primera palabra es un verbo y se recomienda usar camelCase.
+
+Un proyecto de GobstonesWeb puede traer definidos procedimientos que expresen las primitivas del problema a los cuales se llaman procedimientos primitivos, por Ej. Mover El Alien al Este
+
+La Repetición simple permite repetir un grupo de comandos una cantidad fija de veces.
+
+Para ello se utiliza la palabra clave repeat con una expresión numérica (entre paréntesis) seguido de un cuerpo (entre llaves)
+
+Vimos que los comandos primitivos llevan argumentos, los cuales son datos que le dan información al comando. Estos se usan entre parentesis despues del nombre del comando.
+
+En GobstonesWeb, los procedimientos primitivos que esperan argumentos tienen un _ en el nombre, como por ejemplo MoverMarcianoAl_
+
+Un procedimiento podría definir tener parámetros, por cada parámetro definido, el comando definido esperará un argumento (misma cantidad y orden)
+
+El nombre de un parámetro debe ser un sustantivo (pues describe un dato), en Gobstones debe empezar con minúscula y también usamos camelCase para escribirlo
+
+En lo que respecta al uso de parámetros, solo tienen validez dentro del procedimiento que los define (hablamos del alcance del parámetro)
+
+Los comandos primitivos no aceptan cualquier argumento. Poner espera un color, Mover una dirección
+
+Un tipo de dato sirve para saber qué dato poner en un argumento. Entonces, los parámetros deben indicar cuál es ese tipo y es parte del contrato de los procedimientos, en la
+parte de los parámetros
+
+Las expresiones primitivas sirven para sensar el tablero. La expresión nroBolitas(<color>) de tipo número, describe el número de bolitas de ese color en la celda actual
+
+Los operadores numéricos sirven para hacer cuentas con cualquier número. Los operadores binarios son +,-, *, div, mod, ^ .
+
+Las funciones primitivas son similares a las expresiones primitivas pero las construye el que diseña la actividad. Por ejemplo
+
+Los operadores de enumeración permiten modificar una dirección (y otros elementos también). Son 3: siguiente, previo y opuesto. siguiente avanza en el sentido de las agujas del reloj, por ej siguiente(Norte) es Este, etc. previo avanza en el sentido contrario, por ejemplo previo(Norte) es Oeste, etc.
+
+Las alternativas condicionales permiten que el programa tome decisiones entre diferentes situaciones. La condición se describe con una expresión booleana la cual puede ser verdadera o falsa
+
+¿Qué expresiones tienen tipo Bool? Conozcamos primero 2 expresiones primitivas que permiten sensar el tablero y dar información sobre él
+Están vinculadas a los comandos primitivos parciales. Ellas son hayBolitas(<color>) y puedeMover(<dirección>)
+
+Se usan las palabras claves if, then y else.
+
+Para armar condiciones más complejas existen los operadores de comparación: igual (==), distinto (/=), menor o igual (<=), menor (<), mayor o igual (>=), mayor (>)
+
+Asi tambien como los operadores logicos como operador de negación(not), la conjunción (y también, &&) y la disyunción (o bien, ||)
+
+Las funciones simples describen el valor de una expresión dada, permiten descomponer una expresión compleja en partes más simples y aportan legibilidad.
+Se utiliza la palabra clave function, el nombre empieza con minúscula, tienen un cuerpo que solo tiene la palabra clave
+return seguida de una expresión entre paréntesis
+
+
+.
